@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+
+}
+#container{
+    width: 500px;
+    height: 1000000000px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    border: black solid 2px;
+    background-color: thistle;
+    font-size: 1.4em;
+}
+#numDice{
+    width: 200px;
+    height: 30px;
+    margin: 20px;
+    font-size: 1.2em;
+}
+#label{
+    font-size: 1.2em;
+}
+#Mybttn{
+    width: 100px;
+    height: 40px;
+    font-size: 1.2em;
+    background-color: rgb(240, 235, 239);
+    border: rgb(21, 36, 105) solid 1px;
+    cursor: pointer;
+}
+#Mybttn:hover{
+    background-color: rgb(238, 102, 209);
+    border: rgb(21, 36, 105) solid 3px;
+}
+#Mybttn:active{
+    background-color: rgb(160, 6, 127);
+    border: rgb(21, 36, 105) solid 3px;
+    transform: translateY(2px);
+}
+
+#dice img{
+    width: 80px;      /* change to 50px / 60px if you want smaller */
+    height: auto;     /* keeps aspect ratio */
+    margin: 5px;
+}
