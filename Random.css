@@ -1,0 +1,20 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+}
+#MyBttn{
+    background-color: rgb(238, 155, 187);
+    color: rgb(78, 2, 78);
+    padding: 10px 20px;
+    border: none;
+    font-size: 200px;
+}
+#Dice{
+    font-size: 200px;
+}
+
+#MyBttn:hover{   
+    background-color: rgb(72, 50, 197);
+    cursor: pointer;
+}

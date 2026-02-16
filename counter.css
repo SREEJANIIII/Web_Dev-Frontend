@@ -1,0 +1,25 @@
+#counter {
+    display: block;
+    text-align: center;
+    font-size: 6em;
+    font-family: 'Arial', sans-serif;
+    color: rgb(62, 8, 116);
+}
+
+#CounterContainer{
+    text-align: center;
+}
+.button{
+    font-size: 4em;
+    font-family: 'Arial', sans-serif;
+    color: rgb(233, 76, 155);
+    background-color: rgb(255, 242, 255);
+}
+
+.button:hover{
+    background-color: rgb(255, 215, 243);
+    cursor: pointer;
+}
+
+
+
