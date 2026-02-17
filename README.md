@@ -6,7 +6,8 @@ The goal of this repo is to **track my progress**, practice core JavaScript conc
 Each project increases slightly in difficulty and focuses on strengthening my understanding of **JavaScript, DOM manipulation, events, and UI behavior**.
 
 ---
-LINKS: https://sreejaniiii.github.io/Web_Dev-Frontend/Temp.Conv/
+LINKS: https://sreejaniiii.github.io/Web_Dev-Frontend/DIce_Roller/
+https://sreejaniiii.github.io/Web_Dev-Frontend/Temp.Conv/
 
 
 ## 🧠 What I am learning through this repo
