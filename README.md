@@ -7,7 +7,7 @@ Each project increases slightly in difficulty and focuses on strengthening my un
 
 ---
 LINKS: 
-Live clock (IST): https://sreejaniiii.github.io/Web_Dev-Frontend/
+Live clock (IST): https://sreejaniiii.github.io/Web_Dev-Frontend/Clock/
 
 https://sreejaniiii.github.io/Web_Dev-Frontend/DIce_Roller/
 
