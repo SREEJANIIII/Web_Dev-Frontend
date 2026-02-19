@@ -234,3 +234,77 @@ fish1.swim(); //Fish is swimming
 let hawk1=new hawk();
 hawk1.eat(); //Hawk is eating
 hawk1.fly(); //Hawk is flying
+
+//super keyword: Used to call the constructor of the parent class and to access the properties and methods of the parent class. It is used in the child class to call the constructor of the parent class and to access the properties and methods of the parent class.
+class Dog extends Animal{
+    constructor(name,breed){
+        super(name); //Calling the constructor of the parent class (Animal) to initialize the name property
+        // or super(); this.name=name;
+        this.breed=breed; //Initializing the breed property of the Dog class
+    }
+    bark(){
+        console.log(`${this.name} is barking`);
+    }
+}
+let dog1=new Dog("Buddy","Golden Retriever");
+dog1.eat(); //Buddy is eating (inherited from Animal class)
+dog1.bark(); //Buddy is barking (defined in Dog class)
+console.log(dog1.breed); //Golden Retriever (defined in Dog class)
+
+//Deconstruction: A syntax to unpack values from arrays or properties from objects into distinct variables. It is used to extract values from arrays or objects and assign them to variables in a more concise way.
+arr=[1,2,3];
+[arr[0],arr[2]]= [arr[2],arr[0]]; //Swapping the first and third elements of the array using deconstruction
+console.log(arr); // [3,2,1]
+
+//Sorting using .sort(): Used to sort data lexicographically. 1,2,10 will be sorted as 1,10,2 because it sorts based on the first character. To sort numbers in ascending order, we can pass a compare function to the sort method.
+let num3=[1,2,10,5,3];
+num3.sort((a,b)=>a-b); //Sorting numbers in ascending order using a compare function. If the result is negative, a is sorted before b. If the result is positive, b is sorted before a. If the result is 0, the order of a and b is unchanged.
+console.log(num3); // [1,2,3,5,10]
+num3.sort((a,b)=>b-a); //Sorting numbers in descending order using a compare function. If the result is negative, b is sorted before a. If the result is positive, a is sorted before b. If the result is 0, the order of a and b is unchanged.
+console.log(num3); // [10,5,3,2,1]
+ let per=[{name:"Sreejani",age:19},{name:"Sanvi",age:18},
+{name:"Anvi",age:20}];
+per.sort((a,b)=>a.age-b.age); //Sorting an array of objects based on the age property in ascending order using a compare function. If the result is negative, a is sorted before b. If the result is positive, b is sorted before a. If the result is 0, the order of a and b is unchanged.
+console.log(per); // [{name:"Sanvi",age:18},{name:"Sreejani",age:19},{name:"Anvi",age:20}]
+
+//Shuffling of an array
+let arr4=[1,2,3,4,5];
+function shuffle(array){
+    for(let i=array.length-1;i>0;i--){
+        const j=Math.floor(Math.random()*(i+1)); //Generating a random index from 0 to i
+        [array[i],array[j]]=[array[j],array[i]]; //Swapping the elements at index i and j using deconstruction
+    }
+}
+shuffle(arr4);
+console.log(arr4); //The output will be a shuffled version of the original array [1,2,3,4,5]
+
+//Closures: A closure is a function that has access to its own scope, the outer function's scope, and the global scope. It is created when a function is defined inside another function and the inner function has access to the variables of the outer function even after the outer function has returned.
+function outer(){
+    let count=0; //count is a variable in the outer function's scope
+    function inner(){
+        count++; //inner function has access to the count variable of the outer function's scope
+        console.log(count);
+    }
+return inner; //Returning the inner function to create a closure
+}outer() ;//To see the output, we need to call the inner function after calling the outer function. For example, if we do const counter=outer(); counter(); counter(); counter(); then we will see the output 1, 2, 3 because the inner function is called three times and it increments the count variable each time.
+    
+//Using objects to create closures
+function createCounter(){
+    let count=0; //count is a variable in the outer function's scope
+    function inner(){
+        count++;
+        console.log(count);
+    }
+    function inner2(){
+        count--;
+        console.log(count);
+    }
+return {inner,inner2}; //Returning an object with the inner and inner2 functions as properties to create a closure
+}
+const counter1=createCounter(); //counter1 is a closure that has access to the count variable of the outer function's scope
+counter1.inner(); //1
+counter1.inner(); //2
+counter1.inner(); //3
+counter1.inner2(); //2
+counter1.inner2(); //1
+console.log(counter1.count); //undefined because count is not a property of the counter1 object, it is a variable in the outer function's scope that is accessed by the inner function through the closure.

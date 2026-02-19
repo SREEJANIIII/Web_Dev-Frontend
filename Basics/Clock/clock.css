@@ -1,0 +1,25 @@
+body{
+    background-image:url(Life-of-a-Showgirl-Website-1200x800.png);
+    background-repeat: no-repeat; 
+
+background-position: center; 
+
+background-attachment: fixed; 
+
+background-size: cover;
+display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+
+    #clock{
+    font-size: 15em;
+    color: yellow;
+    font-weight: bold;
+    backdrop-filter: blur(5px);
+    background-color: rgba(230, 230, 215, 0.6);  
+}
