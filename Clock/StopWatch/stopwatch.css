@@ -48,7 +48,7 @@ body{
     background-color: red;
 }
 #reset{
-    background-color: rgb(7, 32, 146);
+    background-color: rgb(52, 146, 235);
 }
 
 #start:hover{
@@ -58,5 +58,5 @@ body{
     background-color: rgb(247, 85, 85);
 }
 #reset:hover{
-    background-color: rgb(5, 5, 194);
+    background-color: rgb(56, 189, 223);
 }
