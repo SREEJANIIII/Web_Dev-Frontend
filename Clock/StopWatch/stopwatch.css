@@ -1,0 +1,62 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 206, 206);
+}
+
+#text{
+    font-size: 5em;
+    color:rgb(21, 36, 105)
+}
+
+#container{
+    width: 800px;
+    height: 250px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    border: black solid 2px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+}
+
+.Mybttn{
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    border: rgb(0, 0, 0) solid 1px;
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+    margin: 10px;
+}
+
+#timer{
+    font-size: 5em;
+    margin: 20px;
+    font-weight: bold;
+    font-family: monospace;
+    text-shadow: 5px 5px 10px rgb(21, 36, 105);
+}
+
+#start{
+    background-color: green;
+}
+#stop{
+    background-color: red;
+}
+#reset{
+    background-color: rgb(7, 32, 146);
+}
+
+#start:hover{
+    background-color: rgb(4, 150, 4);
+}
+#stop:hover{
+    background-color: rgb(247, 85, 85);
+}
+#reset:hover{
+    background-color: rgb(5, 5, 194);
+}
