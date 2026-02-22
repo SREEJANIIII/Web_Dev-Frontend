@@ -6,7 +6,7 @@ let hrs=0;
 let min=0;
 let sec=0;
 let msec=0;
-
+let timer=null;
 
 function startTimeR() {
        msec++;
@@ -24,11 +24,14 @@ function startTimeR() {
     }
     document.getElementById('timer').textContent=`${hrs.toString().padStart(2,'0')}:${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}:${msec.toString().padStart(2,'0')}`;
 }
+
 stop.onclick=function(){
     clearInterval(timer);
+    timer=null;
 }
 reset.onclick=function(){
     clearInterval(timer);
+    timer=null;
     hrs=0;
     min=0;
     sec=0;
@@ -36,5 +39,7 @@ reset.onclick=function(){
     document.getElementById('timer').textContent=`${hrs.toString().padStart(2,'0')}:${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}:${msec.toString().padStart(2,'0')}`;
 }
 start.onclick=function(){
+    if(timer==null){
     timer=setInterval(startTimeR,10);
+}
 }
