@@ -141,7 +141,7 @@ let person2={
 }
 person2.eat(); //Eating maggie. My name is Sreejani
 
-console.log(this.name); //this refers to the global object (window in browsers) and name is not defined in the global object, so it will return undefined. If we define a name property in the global object, it will return that value. For example, if we add window.name="GlobalName"; then console.log(this.name); will return "GlobalName".
+//console.log(this.name); //this refers to the global object (window in browsers) and name is not defined in the global object, so it will return undefined. If we define a name property in the global object, it will return that value. For example, if we add window.name="GlobalName"; then console.log(this.name); will return "GlobalName".
 //this keyword does not work in arrow functions because they do not have their own 'this' keyword. They inherit 'this' from the parent scope. So if we use 'this' in an arrow function, it will refer to the 'this' of the parent scope. For example, if we use 'this.name' in an arrow function inside an object method, it will refer to the global object and not the object itself.
 
 //Constructor Functions: Used to create multiple objects with the same properties and methods. They are defined using a function and the 'new' keyword is used to create an instance of the object.
@@ -308,3 +308,42 @@ counter1.inner(); //3
 counter1.inner2(); //2
 counter1.inner2(); //1
 console.log(counter1.count); //undefined because count is not a property of the counter1 object, it is a variable in the outer function's scope that is accessed by the inner function through the closure.
+
+//Modules: A module is a file that contains code that can be imported and used in other files. It is used to organize code and to reuse code in different parts of the application. In JavaScript, we can use the 'export' keyword to export functions, objects, or values from a module and the 'import' keyword to import them into another module. Modules are supported in modern browsers and in Node.js.
+import {getCircumference,getArea,getVolume} from './mathUtil.js'; //Importing the functions from the mathUtil module
+console.log(getCircumference(5)); //31.400000000000002
+console.log(getArea(5)); //78.5
+console.log(getVolume(5)); //523.3333333333334 
+
+//Synchronous and Asynchronous JavaScript: Synchronous JavaScript is executed in a single thread and each operation is executed one after the other. Asynchronous JavaScript is executed in a non-blocking way and allows multiple operations to be executed at the same time. Asynchronous JavaScript is achieved using callbacks, promises, and async/await. It is used to perform tasks that take time to complete, such as fetching data from an API or reading a file, without blocking the main thread of execution.
+
+function Func1(callback){
+    setTimeout(()=>{
+        console.log("Function 1");
+        callback(); //Calling the callback function after the asynchronous operation is complete
+    },20000); //Simulating an asynchronous operation that takes 2 seconds to complete    
+}
+function Func2(){
+    console.log("Function 2");
+}
+Func1(Func2); //Function 1 will be printed after 2 seconds and then Function 2 will be printed immediately after that because it is called as a callback function in Func1.
+
+//Exception handelling
+//try(), catch(), finally()
+try{
+    console.log(x3); //This will throw an error because x3 is not defined
+    let x=10;
+    let y=0;
+    if(y===0){
+        throw new Error("Cannot divide by zero"); //Throwing an error if y is 0 to prevent division by zero
+    }
+    let z=x/y;
+    console.log(z);
+
+}
+catch(error){
+    console.error(error.message); //Catching the error and printing the error message
+}
+finally{
+    console.log("This will always be executed"); //The finally block will always be executed regardless of whether an error was thrown or not
+}
