@@ -13,6 +13,8 @@ https://sreejaniiii.github.io/Web_Dev-Frontend/DIce_Roller/
 
 https://sreejaniiii.github.io/Web_Dev-Frontend/Temp.Conv/
 
+https://sreejaniiii.github.io/Web_Dev-Frontend/Calculator/
+
 
 ## 🧠 What I am learning through this repo
 
@@ -79,6 +81,28 @@ A temperature conversion tool that converts values between **Celsius and Fahrenh
 
 ---
 
+### 3️⃣ Calculator Application 🧮
+
+**Description:**
+A JavaScript-based calculator that performs basic arithmetic operations with proper input handling and undo functionality.
+The project focuses on understanding UI state, user input control, and dynamic updates using JavaScript.
+
+**Features:**
+
+Number and operator buttons for calculations
+
+Supports addition, subtraction, multiplication, and division
+
+Prevents invalid operator sequences
+
+Clear (C) button to reset the calculator
+
+Undo (backspace-style) functionality using history tracking
+
+Result evaluation with error handling
+
+Display updates dynamically based on user actions
+
 ## 🔄 Future Projects (Planned)
 
 This repository will continue to grow as I learn more JavaScript.  
@@ -86,7 +110,6 @@ Some upcoming ideas include:
 
 - Tic-Tac-Toe (with AI finish)
 - Quiz Application
-- Calculator with keyboard support
 - Mini JavaScript Games
 
 Each new project will introduce **new concepts and increased complexity**.
