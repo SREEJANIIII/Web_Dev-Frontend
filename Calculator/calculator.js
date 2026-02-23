@@ -26,6 +26,13 @@ operator.onclick=function(){
         num=0;
         ope=1;
     }
+    else if(operator.textContent=="-"&&num==0&&hist[hist.length-1]!="-")
+    {
+        hist.push(operator.textContent);
+        display.textContent+=operator.textContent;
+        num=0;
+
+    }
     
 }
 }
@@ -71,9 +78,14 @@ clear.onclick=function(){
     let num="";
     let tokens=[];
 
-    for(let ch of hist){
+    for(let i=0;i<hist.length;i++){
+        let ch=hist[i];
         if(!isNaN(ch)||ch==".")
             num+=ch;
+        else if((i==0||hist[i-1]=="+"||hist[i-1]=="*"||hist[i-1]=="/")&&ch=="-"){
+            num+=ch;
+        
+        }
         else if(ch=="+"||ch=="-"||ch=="*"||ch=="/")
         {
             if(num!="")
