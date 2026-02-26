@@ -1,7 +1,4 @@
 console.log("HELLO"); //Output
-window.alert("THIS IS AN ALERT"); //Alert Window
-//document.getElementById("MyDiv").textContent=`MY DIV`; //To change the content of MYDIv
-
 //VARIABLES
 let age=19.6;
 console.log(`You are ${age} years old`);
@@ -25,18 +22,7 @@ brackets
 exponents
 mult/div
 add/sub
-*/
-
-//Take input using prompt window
-let interest=window.prompt("Whats your interest (coding or programming)?");
-console.log(interest); //or console.log(`${interest}); (same thing) 
-let age1=window.prompt("Enter your age");
-age1+=1;
-console.log(age1,typeof age1); //age1 is a string. so ans is 201 (if input was 20)
-let age2=Number(window.prompt("Enter your age")); //Type-convertion to number
-age2+=1;
-console.log(age2,typeof age2); //age2 is a number. so ans is 21 (if input was 20)
-
+*/ 
 
 //Take input from input box and button
 let username;
@@ -347,3 +333,82 @@ catch(error){
 finally{
     console.log("This will always be executed"); //The finally block will always be executed regardless of whether an error was thrown or not
 }
+
+//DOM manipulation: It is the process of using JavaScript to dynamically change a webpage’s content, structure, or styles after it loads.
+//Element selector is a CSS selector that targets HTML elements by their tag name (like p, div, h1) to apply styles or access them in JavaScript.
+
+//DOM Navigation
+//.firstElementChild
+//.lastElementChild
+let fruits=document.querySelectorAll("ul");
+fruits.forEach((f) =>{let lastFruit=f.lastElementChild;
+    lastFruit.style.backgroundColor="yellow";
+})
+
+//.nextElementSibling
+//.previousElementSibling
+let apple=document.getElementById("Apple");
+let nxtEle=apple.nextElementSibling;
+nxtEle.style.backgroundColor="red"
+
+//.parentElement
+const element=document.getElementById("Potato");
+let veg=element.parentElement;
+veg.style.backgroundColor="orange"
+
+//.children
+let elements=document.getElementById("fruits");
+let children=elements.children;
+children[0].style.backgroundColor="green";
+
+//Add and edit html elements
+//1. Create and add an element
+let newh1=document.createElement("h1");
+
+//2. Add properties to it
+newh1.textContent="Hello";
+newh1.style.backgroundColor="red";
+
+//3. Append the element to the dom (Below the page) or Prepend the element to the dom (Add it below the page)
+document.body.append(newh1);
+document.body.prepend(newh1);
+//OR
+document.getElementById("box1").prepend(newh1);
+
+//Using insertBefore(element, the element before whom u want to insert)
+document.body.insertBefore(newh1,box2);
+
+//4. Remove the element
+document.body.removeChild(newh1); //parentNode will be the last place where it has been kept. 
+newh1.remove(); //Removes from every place
+
+//addEventListener() is a method used to attach an event (like a click, key press, or mouse movement) to an element, so a specific function runs when that event happens.
+
+const myBox=document.getElementById("box2");
+console.log(myBox);
+
+function Clicking(event){ //event="click"
+    event.target.style.backgroundColor="red";
+    event.target.textContent="OUCH😿";
+}
+myBox.addEventListener("click",Clicking); //events are click, mouseover(hover), mouseout(to reset the element after the curser moves out)
+myBox.addEventListener("mouseout",event=>{
+    event.target.style.backgroundColor="yellow";
+    event.target.textContent="HELLO 🙂  ";
+})
+
+//When u want to change the things of myBox by clicking on a different button
+const myBttn=document.getElementById("MyBttn");
+console.log(myBox);
+
+function Clicking2(event){ //event="click"
+   myBox.style.backgroundColor="red";
+    myBox.textContent="OUCH😿";
+}
+myBttn.addEventListener("click",Clicking2);
+//eventListener- Used to listen for specific events to create interactive pages
+//events:keydown (when the arrows are pressed),keyup (when the arrows are released)
+
+//event.target: when working with mouse events
+//event.key: when working with key events
+//event.preventDefault()- To prevent default behaiviours of website and set them up manually

@@ -1,0 +1,11 @@
+#emoji{
+    border: rgb(70, 3, 87) solid 2px;
+    width:30%;
+    height:30%;
+    font-size:8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #c00c7b;
+}
