@@ -412,3 +412,37 @@ myBttn.addEventListener("click",Clicking2);
 //event.target: when working with mouse events
 //event.key: when working with key events
 //event.preventDefault()- To prevent default behaiviours of website and set them up manually
+//Visibilty: To hide img.style.visibility="hidden";
+//To make it back visible img.style.visibility="visible";
+
+//Nodelists: Static collection of HTML collection
+//created useing querySelectorByAll()
+//Similar to Array bt does not support functions like map, filter, reduce
+
+//Classlists: Enables u to make reusable classes for variable elements as per our need
+//add()
+//remove()
+//toggle() (REmove if present, add if not)
+//replace(oldclass, newclass)
+//contains
+const HOLA5=document.createElement("HOLA5");
+HOLA5.textContent="HOLA";
+HOLA5.classList.add("HOLA");
+document.body.append(HOLA5);
+
+let hola=document.querySelectorAll(".HOLA");    
+hola.forEach(bttn =>{
+    bttn.addEventListener("click",event=>{
+        bttn.style.backgroundColor="yellow";
+        bttn.textContent="BYE";
+    })
+    bttn.addEventListener("mouseout",event=>{
+        bttn.style.backgroundColor="hsl(332, 68%, 65%)";
+        bttn.textContent="HOLA";
+    })
+})
+
+//Nodelist wont automatically get added even if we ubdate them using dom navigation. We will need to manually add them
+
+
+

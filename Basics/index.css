@@ -18,3 +18,11 @@
     font-size: 2em;
     background-color: hsl(0, 2%, 71%)
 }
+
+.HOLA{
+     width:20%;
+    height:20%;
+    font-size: 2em;
+    background-color: hsl(332, 68%, 65%);
+    border: black solid 2px;
+}
