@@ -1,0 +1,39 @@
+.bttns{
+    background-color: white;
+    top:50%;
+    font-size: 2em;
+    position: absolute;
+}
+
+#prev{
+    left:0px;   
+}
+
+#next{
+    right:0px;   
+}
+#disp img {
+    position: relative;
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  display: block;
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.15),
+    0 20px 60px rgba(0,0,0,0.2);
+     transition: opacity 1s ease, transform 0.4s ease;
+}
+#disp img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+body{
+    background-size: cover;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
