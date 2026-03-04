@@ -15,7 +15,7 @@ Temperature converter: https://sreejaniiii.github.io/Web_Dev-Frontend/Temp.Conv/
 
 Calculator: https://sreejaniiii.github.io/Web_Dev-Frontend/Calculator/
 
-Website for the swifties: https://sreejaniiii.github.io/Web_Dev-Frontend/Image_Slider/
+A Webpage for the swifties: https://sreejaniiii.github.io/Web_Dev-Frontend/Image_Slider/
 
 
 ## 🧠 What I am learning through this repo
