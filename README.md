@@ -17,6 +17,8 @@ Calculator: https://sreejaniiii.github.io/Web_Dev-Frontend/Calculator/
 
 A Webpage for the swifties: https://sreejaniiii.github.io/Web_Dev-Frontend/Image_Slider/
 
+Pokaemon webpage: https://sreejaniiii.github.io/Web_Dev-Frontend/Pokaemon/
+
 
 ## 🧠 What I am learning through this repo
 
@@ -104,6 +106,43 @@ Undo (backspace-style) functionality using history tracking
 Result evaluation with error handling
 
 Display updates dynamically based on user actions
+
+---
+
+### 4️⃣ Pokémon Generator 🔍⚡
+
+**Description:**
+A JavaScript web application that fetches Pokémon data from the PokéAPI and dynamically displays the Pokémon’s official artwork based on user input. This project introduces API integration and asynchronous JavaScript into my learning journey.
+
+**Features:**
+
+User enters the name of a Pokémon
+
+Data fetched dynamically from the PokéAPI
+
+Displays high-resolution official Pokémon artwork
+
+Uses async/await for handling API requests
+
+Updates the UI dynamically after fetching data
+
+Converts user input to API-compatible format
+
+**Concepts Used:**
+
+Fetch API
+
+Asynchronous JavaScript (async / await)
+
+JSON data handling
+
+DOM manipulation
+
+Event listeners
+
+Dynamic image rendering
+
+API integration
 
 ## 🔄 Future Projects (Planned)
 
