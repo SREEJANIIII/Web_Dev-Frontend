@@ -9,11 +9,13 @@ Each project increases slightly in difficulty and focuses on strengthening my un
 LINKS: 
 Live clock (IST): https://sreejaniiii.github.io/Web_Dev-Frontend/Clock/
 
-https://sreejaniiii.github.io/Web_Dev-Frontend/DIce_Roller/
+Dice roller: https://sreejaniiii.github.io/Web_Dev-Frontend/DIce_Roller/
 
-https://sreejaniiii.github.io/Web_Dev-Frontend/Temp.Conv/
+Temperature converter: https://sreejaniiii.github.io/Web_Dev-Frontend/Temp.Conv/
 
-https://sreejaniiii.github.io/Web_Dev-Frontend/Calculator/
+Calculator: https://sreejaniiii.github.io/Web_Dev-Frontend/Calculator/
+
+A Webpage for the swifties: https://sreejaniiii.github.io/Web_Dev-Frontend/Image_Slider/
 
 
 ## 🧠 What I am learning through this repo
