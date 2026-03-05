@@ -1,7 +1,7 @@
 # JavaScript Frontend Projects 🚀
 
 This repository contains my **JavaScript frontend projects** that I am building while learning web development.  
-The goal of this repo is to **track my progress**, practice core JavaScript concepts, and gradually move from **basic logic to more complex, real-world projects**.
+The goal of this repo is to **track my progress**, practice core JavaScript concepts, and gradually move from **basic logic to more complex, real-world projects.**
 
 Each project increases slightly in difficulty and focuses on strengthening my understanding of **JavaScript, DOM manipulation, events, and UI behavior**.
 
