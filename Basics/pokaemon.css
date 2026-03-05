@@ -44,8 +44,9 @@ button{
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    background: linear-gradient(45deg,#e794ce,#690347);
-    color: white;
+    background: linear-gradient(45deg,#dcdd99,#e4d61d);
+    color: black;
+    font-weight: bold;
     transition: 0.3s;
 }
 
