@@ -32,6 +32,7 @@ Through these projects, I am actively learning and practicing:
 - Input validation
 - Updating UI dynamically
 - Working with images using JavaScript
+- Fetching data from API using json file manipulation and async/await functions.
 - Basic HTML & CSS for layout and styling
 - Using Git and GitHub for version control
 
