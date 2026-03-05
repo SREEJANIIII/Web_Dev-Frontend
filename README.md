@@ -107,6 +107,7 @@ Result evaluation with error handling
 
 Display updates dynamically based on user actions
 
+---
 
 ### 4️⃣ Pokémon Generator 🔍⚡
 
@@ -127,7 +128,7 @@ Updates the UI dynamically after fetching data
 
 Converts user input to API-compatible format
 
-Concepts Used:
+**Concepts Used:**
 
 Fetch API
 
