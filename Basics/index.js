@@ -563,3 +563,19 @@ async function main(){
      */
 }
 main();
+
+//Json files: JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is used to store and exchange data between a server and a client. In JavaScript, we can use the JSON.parse() method to convert a JSON string into a JavaScript object and the JSON.stringify() method to convert a JavaScript object into a JSON string.
+let jsonString='{"name":"Sreejani","age":19}';
+let jsonObj=JSON.parse(jsonString); //Converting the JSON string into a JavaScript object
+console.log(jsonObj.name); //Sreejani
+console.log(jsonObj.age); //19
+
+//This is mainly used when we want to fetch data from an API that returns data in JSON format. We can use the fetch() method to make a request to the API and then use the .json() method to parse the response as JSON. For example:
+fetch('https://api.example.com/data')
+    .then(response=>response.json()) //Parsing the response as JSON
+    .then(data=>{
+        console.log(data); //The data returned from the API in JSON format
+    })
+    .catch(error=>{
+        console.error(error); //Catching any error that occurs during the fetch operation
+    });
