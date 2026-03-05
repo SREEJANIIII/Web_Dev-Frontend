@@ -444,5 +444,122 @@ hola.forEach(bttn =>{
 
 //Nodelist wont automatically get added even if we ubdate them using dom navigation. We will need to manually add them
 
+//Callback Hell: When we have multiple nested callbacks, it becomes difficult to read and maintain the code. This is called callback hell. To avoid callback hell, we can use promises and async/await to write cleaner and more readable code.
 
+function task1(callback){
+    setTimeout(()=>{
+        console.log("Task 1");
+        callback();
+    },2000);
+}
+function task2(callback){
+    setTimeout(()=>{
+        console.log("Task 2");
+        callback();
+    },1000);
+}
+function task3(){
+    setTimeout(()=>{
+        console.log("Task 3");
+    },500);
+}           
+function tast4(){
+    setTimeout(()=>{
+        console.log("Task 4");
+    },3000);
+}
+task1(()=>{
+    task2(()=>{
+        task3();
+        tast4();
+    })
+})
 
+//Promise: A promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It is used to handle asynchronous operations in a more elegant way and to avoid callback hell. A promise can be in one of three states: pending, fulfilled, or rejected. We can use the .then() method to handle the fulfilled state and the .catch() method to handle the rejected state.
+function task5(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("Task 5"); //Resolving the promise with the value "Task 1" after 2 seconds
+        },2000);
+    });
+}
+//To demostrate rejecting a promise, we can modify the task2 function to reject the promise instead of resolving it. For example:
+function task6(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            reject(new Error("Task 6 failed")); //Rejecting the promise with an error message after 1 second
+        },1000);
+    });
+}
+function task7(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("Task 7"); //Resolving the promise with the value "Task 3" after 0.5 seconds
+        },500);
+    });
+}
+
+task5().then(result=>{
+    console.log(result); //Task 1
+    return task6(); //Returning the promise to the next then to chain the promises
+}).then(result=>{
+    console.log(result); //Task 2
+    return task7(); 
+}).catch(error=>{
+    console.error(error);
+    return task7(); //Catching any error that occurs in the promise chain
+}).then(result=>{
+    console.log(result); //Task 3 (This will still be executed even if task6 fails because we have a catch block to handle the error)
+});
+
+//Async/Await: Async/await is a syntactical sugar over promises that allows us to write asynchronous code in a more synchronous way. It is used to handle asynchronous operations in a more elegant way and to avoid callback hell. The 'async' keyword is used to define an asynchronous function and the 'await' keyword is used to wait for a promise to be resolved before moving on to the next line of code. It makes the code easier to read and understand.
+function task8(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("Task 8");
+        },2000);
+    });
+}
+function task9(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            reject("Task 9 failed"); //Rejecting the promise with an error message after 1 second
+        },1000);
+    });
+}
+function task10(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("Task 10");
+        },500);
+    });
+}
+async function main(){
+    try{
+        const result1=await task8(); //Waiting for task8 to be resolved before moving on to the next line of code
+        console.log(result1); //Task 8
+        const result2=await task9(); //Waiting for task9 to be resolved before moving on to the next line of code
+        console.log(result2); //Task 9
+        const result3=await task10(); //Waiting for task10 to be resolved before moving on to the next line of code
+        console.log(result3); //Task 10
+    }
+    catch(error){
+        console.error(error); //Catching any error that occurs in the async function
+    } //if u want to execute task10 even if task9 fails, u can move the try-catch block inside the main function and wrap only the task9 call in the try-catch block. For example:
+    /*
+    async function main(){
+        try{
+            const result1=await task8();
+            console.log(result1);
+            const result2=await task9();
+            console.log(result2);
+        }
+        catch(error){
+            console.error(error);
+        }
+        const result3=await task10();
+        console.log(result3);
+    }
+     */
+}
+main();
