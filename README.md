@@ -107,12 +107,13 @@ Result evaluation with error handling
 
 Display updates dynamically based on user actions
 
-4️⃣ Pokémon Generator 🔍⚡
 
-Description:
+### 4️⃣ Pokémon Generator 🔍⚡
+
+**Description:**
 A JavaScript web application that fetches Pokémon data from the PokéAPI and dynamically displays the Pokémon’s official artwork based on user input. This project introduces API integration and asynchronous JavaScript into my learning journey.
 
-Features:
+**Features:**
 
 User enters the name of a Pokémon
 
